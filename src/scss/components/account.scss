@@ -1,0 +1,118 @@
+.account {
+
+}
+
+.account-nav {
+  list-style: none;
+}
+
+.account-nav-link {
+  display: block;
+  margin-bottom: 30px;
+
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.account-nav-link.active {
+  color: #ED413C;
+}
+
+.account-orders {
+
+}
+
+.account-order {
+  margin-bottom: 20px;
+}
+
+.account-order-title {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 16px 20px;
+  margin-bottom: 5px;
+  background: #F2F2F2;
+  border-radius: 10px;
+}
+
+.account-order-cancel,
+.account-order-delete {
+  border-bottom: 1px dashed #000000;
+}
+
+.account-order-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #DAE1E7;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.account-order-item-inner {
+  display: inline-block;
+  padding-left: 20px;
+  vertical-align: top;
+}
+
+.account-order-item-img {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+
+  img {
+    height: 100px;
+  }
+}
+
+.account-order-item-name {
+  display: inline-block;
+  margin: 0 15px 15px 0;
+  font-size: 16px;
+}
+
+.account-order-item-count {
+
+}
+
+.account-order-item-price {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.account-order-total {
+  padding: 15px 0;
+  font-size: 16px;
+}
+
+.account-order-status {
+  margin-bottom: 15px;
+
+  .value {
+    font-weight: 500;
+    color: #219653;
+  }
+}
+
+.account-order-delivery {
+  .value {
+    font-weight: 500;
+  }
+}
+
+.account-order-sum {
+  margin-top: 25px;
+
+  .value {
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+.account-order-item-feedback {
+  font-weight: 600;
+  font-size: 16px;
+}

@@ -1,0 +1,46 @@
+.main {
+  display: flex;
+  align-items: center;
+  height: 650px;
+  padding: 0;
+  background: #101113 url('../images/bg-1.jpg') center right /cover;
+}
+
+.main-title {
+  margin-bottom: 30px;
+
+  font-size: 16px;
+  font-weight: 400;
+
+  .bold {
+    display: block;
+    margin-bottom: 5px;
+    
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .main {
+    background-position: center;
+  }
+
+  .main:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .main-title .bold {
+    font-size: 27px;
+  }
+}

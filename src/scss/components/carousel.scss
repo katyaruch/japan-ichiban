@@ -1,0 +1,55 @@
+.carousel {
+
+}
+
+.slick-slide {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-arrow {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border: 1px solid #C4C4C4;
+  z-index: 1;
+}
+
+
+.slick-next:before, .slick-prev:before {
+  // color: #C4C4C4;
+  content: url('../images/icon-arrow-slider.svg');
+  display: block;
+  transform: translate(1px,2px);
+}
+
+.slick-prev:before {
+  transform: rotate(180deg);
+}
+
+.slick-slide img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slick-dots {
+  bottom: -35px;
+}
+
+.slick-dots li {
+  border-radius: 50%;
+  border: 1px solid #ED413C;
+}
+
+.slick-dots .slick-active {
+  background-color: #ED413C;
+}
+
+.slick-dots li button:before {
+  display: none;
+}

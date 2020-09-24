@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  @@include('components/_header.html')
+  <!-- WRITE CODE HERE -->
+  <section class="main section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="main-title text-white">
+            Поставки оборудования 
+            <b class="bold">для ресторанов,</b>
+            посуды
+            <b class="bold">для зала,</b>
+            продуктов 
+            <b class="bold">премиум-класса</b>
+            из Японии
+          </h1>
+          <a href="/about.html" class="btn">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="row categories">
+        <div class="col-md-4">
+          <a href="/catalog.html" class="category-item category-item--products">
+            <h3 class="category-item-name">Продукты</h3>
+          </a>
+        </div>
+        <div class="col-md-8">
+          <a href="/catalog.html" class="category-item category-item--posuda">
+            <h3 class="category-item-name">Посуда</h3>
+          </a>
+        </div>
+        <div class="col-md-8">
+          <a href="/catalog.html" class="category-item category-item--decor">
+            <h3 class="category-item-name">Декор</h3>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="/catalog.html" class="category-item category-item--device">
+            <h3 class="category-item-name">Оборудование</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="new products section">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="title">НОВИНКИ</h2>
+        </div>
+      </div>
+
+      @@include('components/product-list.html')
+
+    </div>
+  </section>
+  <section class="form-subscribe">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h2 class="form-subscribe-title">Подпишитесь для получения информации о распродажах, акциях и последних новинках</h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <input type="text" class="form-input" name="user-email" placeholder="Ваш e-mail">
+        </div>
+        <div class="col-md-3">
+          <a href="#" class="btn btn--white">Подписаться</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="popular products section">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="title">Популярные товары</h2>
+        </div>
+      </div>
+
+      @@include('components/product-list.html')
+
+    </div>
+  </section>
+
+  <!-- STOP WRITE CODE -->
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

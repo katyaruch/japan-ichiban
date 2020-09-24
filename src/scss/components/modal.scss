@@ -1,0 +1,76 @@
+.modal--product .modal-dialog {
+  max-width: 970px;
+}
+
+.modal-content {
+  border-radius: 20px;
+  box-shadow: 10px 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  padding: 40px 40px 10px;
+  border: none;
+}
+
+.modal-header .close {
+  // margin: 0;
+}
+
+button.close {
+  padding: 1rem;
+  background: url('../images/icon-close.svg') no-repeat center;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.modal-body {
+  padding: 0 40px;
+}
+
+.modal-footer {
+  padding: 10px 40px 40px;
+  border: none;
+  justify-content: center;
+}
+
+
+.modal-table {
+  width: 100%;
+
+  tr {
+    border-bottom: 1px solid #DAE1E7;
+  }
+
+  tr:last-child {
+    border: none;
+  }
+
+  td {
+    padding: 15px 0;
+  }
+
+  td:last-child {
+    width: 88px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .modal-body {
+    padding: 0 20px;
+  }
+
+  .modal-table {
+    .product-name {
+      width: 40%;
+      font-size: 16px;
+    }
+    
+    .product-price {
+      font-size: 16px;
+    }
+  }
+}

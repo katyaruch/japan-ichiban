@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  @@include('components/_header.html')
+  <!-- WRITE CODE HERE -->
+  <section class="section">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Личный кабинет</li>
+        </ul>
+      </nav>
+
+      <h1 class="title title--underline">Личный кабинет</h1>
+
+      <div class="row">
+        <div class="col-md-2">
+          <ul class="account-nav nav" role="tablist">
+            <li><a class="account-nav-link active" id="account-orders-tab" href="#account-orders" aria-controls="account-orders" data-toggle="tab" role="tab" aria-selected="true">Заказы</a></li>
+            <li><a class="account-nav-link" id="account-personal-tab" href="#account-personal" aria-controls="account-personal" data-toggle="tab" role="tab" aria-selected="false">Личные Данные</a></li>
+            <li><a class="account-nav-link" id="account-feedback-tab" href="#account-feedback" aria-controls="account-feedback" data-toggle="tab" role="tab" aria-selected="false">Обратная связь</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9 tab-content">
+          <div class="account-orders tab-pane fade show active" id="account-orders" role="tabpanel" aria-labelledby="account-orders-tab">
+            <div class="account-order">
+              <div class="account-order-title">
+                Заказ №51685465 от 14.09.2020  13:38
+                <a href="#" class="account-order-cancel">Отменить заказ</a>
+              </div>
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="account-order-item">
+                    <a href="#" class="account-order-item-img">
+                      <img src="/images/products/product-3.png" alt="Устрицы японские">
+                    </a>
+                    <div class="account-order-item-inner">
+                      <span class="account-order-item-name">Устрицы японские</span>
+                      <span class="account-order-item-count">2 шт.</span>
+                      <span class="account-order-item-price">6 600 ₽</span>
+                    </div>
+                  </div>
+                  <div class="account-order-item">
+                    <a href="#" class="account-order-item-img">
+                      <img src="/images/products/product-4.png" alt="Устрицы японские">
+                    </a>
+                    <div class="account-order-item-inner">
+                      <span class="account-order-item-name">Устрицы японские</span>
+                      <span class="account-order-item-count">1 шт.</span>
+                      <span class="account-order-item-price">3 300 ₽</span>
+                    </div>
+                  </div>
+                  <div class="account-order-item">
+                    <a href="#" class="account-order-item-img">
+                      @@include('images/icon-delivery.svg')
+                    </a>
+                    <div class="account-order-item-inner">
+                      <span class="account-order-item-name">Доставка</span>
+                      <span class="account-order-item-price">3 300 ₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="account-order-total">
+                    <p class="account-order-status">Статус: 
+                      <span class="value">В процессе сбора</span>
+                    </p>
+                    <p class="account-order-delivery">Способ получения: 
+                      <span class="value">Доставка по Мск</span>
+                    </p>
+                    <p class="account-order-sum">Итого:
+                      <span class="value">13 200 ₽</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="account-order">
+              <div class="account-order-title">
+                Заказ №51685465 от 14.09.2020  13:38
+                <a href="#" class="account-order-delete">Удалить заказ</a>
+              </div>
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="account-order-item">
+                    <a href="#" class="account-order-item-img">
+                      <img src="/images/products/product-2.png" alt="Устрицы японские">
+                    </a>
+                    <div class="account-order-item-inner">
+                      <span class="account-order-item-name">Устрицы японские</span>
+                      <span class="account-order-item-count">2 шт.</span>
+                      <span class="account-order-item-price">6 600 ₽</span>
+                      <a href="#" class="account-order-item-feedback">Оставить отзыв</a>
+                    </div>
+                  </div>
+                  <div class="account-order-item">
+                    <a href="#" class="account-order-item-img">
+                      <img src="/images/products/product-1.png" alt="Устрицы японские">
+                    </a>
+                    <div class="account-order-item-inner">
+                      <span class="account-order-item-name">Устрицы японские</span>
+                      <span class="account-order-item-count">1 шт.</span>
+                      <span class="account-order-item-price">3 300 ₽</span>
+                      <a href="#" class="account-order-item-feedback">Оставить отзыв</a>
+                    </div>
+                  </div>
+                  <div class="account-order-item">
+                    <a href="#" class="account-order-item-img">
+                      @@include('images/icon-delivery.svg')
+                    </a>
+                    <div class="account-order-item-inner">
+                      <span class="account-order-item-name">Доставка</span>
+                      <span class="account-order-item-price">3 300 ₽</span>
+                      <a href="#" class="account-order-item-feedback">Оставить отзыв</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="account-order-total">
+                    <p class="account-order-status">Статус: 
+                      <span class="value">Завершен</span>
+                    </p>
+                    <p class="account-order-delivery">Способ получения: 
+                      <span class="value">Доставка по Мск</span>
+                    </p>
+                    <p class="account-order-sum">Итого:
+                      <span class="value">13 200 ₽</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="account-personal tab-pane fade" id="account-personal" role="tabpanel" aria-labelledby="account-personal-tab">
+            <div class="row">
+              <form class="col-md-6 form-user-profile">
+                <input class="form-input" type="text" placeholder="Фамилия" value="Иванов">
+                <input class="form-input" type="text" placeholder="Имя" value="Иван">
+                <input class="form-input" type="email" placeholder="E-mail" value="ivanov@mail.ru">
+                <input class="form-input" type="tel" placeholder="+7 (___) ___ - __ - __">
+                <input class="form-input" type="text" placeholder="Адрес доставки">
+                <button type="submit" class="btn w-100">Сохранить</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="account-feedback tab-pane fade" id="account-feedback" role="tabpanel" aria-labelledby="account-feedback-tab">
+            <div class="row">
+              <form class="col-md-8">
+                <textarea class="form-input form-textarea" placeholder="Отзыв, пожелания или вопрос"></textarea>
+                <button type="submit" class="btn w-100">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STOP WRITE CODE -->
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+@import 'vars';
+@import 'fonts';
+@import 'global';
+
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    START CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+@import 'components/header';
+@import 'components/form';
+@import 'components/btn';
+@import 'components/title';
+@import 'components/modal';
+@import 'components/breadcrumb';
+@import 'components/carousel';
+
+@import 'components/main';
+@import 'components/categories';
+@import 'components/products';
+@import 'components/product-card';
+@import 'components/catalog';
+@import 'components/filters';
+@import 'components/cart';
+@import 'components/account';
+@import 'components/delivery';
+@import 'components/articles';
+@import 'components/contacts';
+@import 'components/about';
+
+
+@import 'components/footer';
+//-----------------------------------------------------------------------------------------------------------
+//
+//                                                    END CODE
+//
+//-----------------------------------------------------------------------------------------------------------
+
+@import 'media';

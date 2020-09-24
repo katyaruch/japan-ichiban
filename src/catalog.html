@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  @@include('components/_header.html')
+  <!-- WRITE CODE HERE -->
+
+  <section class="catalog catalog--products section">
+    <div class="container">
+      <div class="row categories">
+        <div class="col-lg-3">
+          <a href="catalog--products" class="category-item category-item--products active">
+            <h3 class="category-item-name">Продукты</h3>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="catalog--posuda" class="category-item category-item--posuda">
+            <h3 class="category-item-name">Посуда</h3>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="catalog--decor" class="category-item category-item--decor">
+            <h3 class="category-item-name">Декор</h3>
+          </a>
+        </div>
+        <div class="col-lg-3">
+          <a href="catalog--device" class="category-item category-item--device">
+            <h3 class="category-item-name">Оборудование</h3>
+          </a>
+        </div>
+      </div>
+      <div class="catalog-wrapper row">
+        <aside class="filters col-6 col-lg-3">
+          <button type="button" class="close"></button>
+          <p class="filters__title">Фильтры</p>
+          <div class="filters__inner">
+            <fieldset class="filter">
+              <a href="#" class="filter__title">Все</a>
+            </fieldset>
+            <fieldset class="filter">
+              <a href="#" class="filter__title">Бакалея</a>
+            </fieldset>
+            <fieldset class="filter">
+              <a href="#" class="filter__title">Рыба</a>
+            </fieldset>
+            <fieldset class="filter active">
+              <legend class="filter__title">Морепродукты</legend>
+              <div class="filter__inner">
+                <div class="filter__checkbox-list">
+                  <label>
+                    <input type="checkbox">
+                    <p class="filter__checkbox-btn">Замороженные</p>
+                  </label>
+                  <label>
+                    <input type="checkbox">
+                    <p class="filter__checkbox-btn">Живые</p>
+                  </label>
+                  <label>
+                    <input type="checkbox">
+                    <p class="filter__checkbox-btn">Охлажденные</p>
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </aside>
+        <div class="catalog-content col-lg-9">
+          <div class="sort">
+            <div class="filters-btn">Фильтры</div>
+            <a href="#" class="sort__item active">По цене</a>
+            <a href="#" class="sort__item">Новинки</a>
+            <a href="#" class="sort__item">Популярное</a>
+            <a href="#" class="sort__item">Рейтинг</a>
+          </div>
+
+          @@include('components/product-list.html')
+
+          <div class="row justify-content-center">
+            <button class="btn btn--white">Показать еще</button>
+          </div>
+          <ul class="pagination row">
+            <li class="pagination__item"><a href="#" class="pagination__link pagination__link--start">В начало</a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link pagination__link--prev">Назад</a></li>
+            <li class="pagination__item active"><a href="#" class="pagination__link">1</a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link">6</a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link">23</a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link pagination__link--next">Вперёд</a></li>
+            <li class="pagination__item"><a href="#" class="pagination__link pagination__link--end">В конец</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STOP WRITE CODE -->
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

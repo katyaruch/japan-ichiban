@@ -1,0 +1,159 @@
+<div class="content">
+  <header id="header-menu" class="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <ul class="nav-contacts d-flex col-6 col-md-9">
+            <li class="nav-contacts-link">
+              <a href="tel:+74957831330">@@include('../images/icon-phone.svg')+7 (495) 783-13-30</a>
+            </li>
+            <li class="nav-contacts-link">
+              <a href="tel:+79265073582">@@include('../images/icon-phone.svg')+7(926) 507-35-82</a>
+            </li>
+            <li class="nav-contacts-link">
+              <a href="mailto:office@japanichiban.ru">@@include('../images/icon-mail.svg')office@japanichiban.ru</a>
+            </li>
+          </ul>
+          <ul class="nav-social col-6 col-md-3">
+            <li class="nav-social-link">
+              <a href="#">@@include('../images/icon-vk.svg')Vk</a>
+            </li>
+            <li class="nav-social-link">
+              <a href="#">@@include('../images/icon-fb.svg')FaceBook </a>
+            </li>
+            <li class="nav-social-link">
+              <a href="#">@@include('../images/icon-instagram.svg')Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg">
+              <a href="/" class="navbar-brand">
+                <picture>
+                  <source srcset="images/logo-mobile.png" media="(max-width: 1024px)">
+                  <img src="images/logo.png" alt="Japan Ichiban">
+                </picture>
+              </a>
+
+              <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown show">
+                    <a href="#" class="nav-link dropdown-toggle" id="catalog" data-toggle="dropdown">Продукция</a>
+                    <div class="dropdown-menu" aria-labelledby="catalog">
+                      <ul class="menu-list">
+                        <li>
+                          <a class="menu-cat" href="/catalog.html">Продукты</a>
+                          <ul class="menu-cat-list">
+                            <li><a href="/catalog.html">Морепродукты</a></li>
+                            <li><a href="/catalog.html">Бакалея</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a class="menu-cat" href="/catalog.html">Посуда</a>
+                          <ul class="menu-cat-list">
+                            <li><a href="/catalog.html">Тарелки</a></li>
+                            <li><a href="/catalog.html">Кувшины / Рюмки</a></li>
+                            <li><a href="/catalog.html">Ложки</a></li>
+                            <li><a href="/catalog.html">Чашки / Чайники</a></li>
+                            <li><a href="/catalog.html">Соусники</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a class="menu-cat" href="/catalog.html">Оборудование</a>
+                          <ul class="menu-cat-list">
+                            <li><a href="/catalog.html">Ножи</a></li>
+                            <li><a href="/catalog.html">Инвентарь</a></li>
+                            <li><a href="/catalog.html">Электроприборы</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a class="menu-cat" href="/catalog.html">Декор</a>
+                          <ul class="menu-cat-list">
+                            <li><a href="/catalog.html">Традиционные сувениры</a></li>
+                            <li><a href="/catalog.html">Декор для зала</a></li>
+                            <li><a href="/catalog.html">Декор для блюд</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/about.html" class="nav-link">О компании</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/delivery.html" class="nav-link">Оплата и доставка </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/for-partners.html" class="nav-link">Партнерам</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/articles.html" class="nav-link">Статьи</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="/contacts.html" class="nav-link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="navbar-user">
+                <form class="form-search">
+                  <input type="search" class="form-input" id="search-input" placeholder="Поиск">
+                  <button type="submit" class="form-search-btn">Найти</button>
+                </form>
+                <a href="/account.html" class="user-link user-profile" title="Профиль">Профиль</a>
+                <a href="/cart.html" class="user-link user-cart" title="Корзина" data-toggle="modal" data-target="#modal-cart">
+                  Корзина
+                  <span class="user-cart-count">2</span>
+                </a>
+              </div>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Кнопка меню">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="modal modal-cart fade" id="modal-cart" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Ваш заказ</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="modal-table">
+            <tr>
+              <td class="product-name">Устрицы японские</td>
+              <td class="product-price">6 600 ₽</td>
+              <td>
+                <input class="cart-spinner" name="quantity" value="2" readonly>
+              </td>
+            </tr>      
+            <tr>
+              <td class="product-name">Устрицы японские</td>
+              <td class="product-price">3 300 ₽</td>
+              <td>
+                <input class="cart-spinner" name="quantity" value="1" readonly>
+              </td>
+            </tr>   
+            <tr>
+              <td class="product-name">Устрицы японские</td>
+              <td class="product-price">3 300 ₽</td>
+              <td>
+                <input class="cart-spinner" name="quantity" value="1" readonly>
+              </td>
+            </tr>       
+          </table>
+        </div>
+        <div class="modal-footer">
+          <a href="/cart.html" class="btn btn--white">Заказать</a>
+        </div>
+      </div>
+    </div>
+  </div>

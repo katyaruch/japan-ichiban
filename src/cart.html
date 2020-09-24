@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  @@include('components/_header.html')
+  <!-- WRITE CODE HERE -->
+
+  <section class="section">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Корзина</li>
+        </ul>
+      </nav>
+
+      <h1 class="title title--underline">Корзина</h1>
+
+      <div class="cart-content row">
+        <span class="cart-products-count">Товаров в корзине: 3</span>
+        <div class="col-md-6 col-lg-8">
+          <table class="cart-table">
+            <tr class="cart-table-item">
+              <td class="cart-product-img">
+                <a href="#"><img src="/images/products/product-3.png" alt="Устрицы японские"></a>
+              </td>
+              <td class="cart-product-name"><a href="#">Устрицы японские</a></td>
+              <td class="cart-product-count">
+                <input class="cart-spinner" name="quantity" value="2" readonly>
+              </td>
+              <td class="cart-product-price">6 600 ₽</td>
+              <td><button class="cart-product-remove">Очистить</button></td>
+            </tr>
+            <tr class="cart-table-item">
+              <td class="cart-product-img">
+                <a href="#"><img src="/images/products/product-2.png" alt="Устрицы японские"></a>
+              </td>
+              <td class="cart-product-name"><a href="#">Устрицы японские</a></td>
+              <td class="cart-product-count">
+                <input class="cart-spinner" name="quantity" value="1" readonly>
+              </td>
+              <td class="cart-product-price">3 300 ₽</td>
+              <td><button class="cart-product-remove">Очистить</button></td>
+            </tr>
+            <tr class="cart-table-item">
+              <td class="cart-product-img">
+                <a href="#"><img src="/images/products/product-4.png" alt="Устрицы японские"></a>
+              </td>
+              <td class="cart-product-name"><a href="#">Устрицы японские</a></td>
+              <td class="cart-product-count">
+                <input class="cart-spinner" name="quantity" value="1" readonly>
+              </td>
+              <td class="cart-product-price">3 300 ₽</td>
+              <td><button class="cart-product-remove">Очистить</button></td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="cart-total">
+            <h2 class="cart-total-title">Оформление заказа</h2>
+            <p class="cart-total-subtitle">Итого к оплате</p>
+            <span class="cart-total-sum">13 230 ₽</span>
+            <a href="#" class="btn">Оформить заказ</a>
+            <a href="#" class="btn btn--white">Купить в 1 клик</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STOP WRITE CODE -->
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>

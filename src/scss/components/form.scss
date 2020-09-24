@@ -1,0 +1,152 @@
+.form {
+
+}
+
+.form-text {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.form-input {
+  width: 100%;
+  height: 50px;
+  padding: 14px 40px 13px;
+  margin-bottom: 20px;
+  border: none;
+  background: #FFFFFF; 
+  border-radius: 35px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+
+.form-input:hover {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+}
+
+.form-textarea {
+  padding: 20px 40px;
+  height: 200px;
+  border-radius: 20px;
+  resize: none;
+}
+
+.form-search {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  // margin: 0 10px;
+  vertical-align: middle;
+
+  .form-input {
+    max-width: 120px;
+    height: 40px;
+    padding: 14px 40px 13px 20px;
+
+    // border-radius: 10px;
+    border-radius: 35px;
+    box-shadow: none;
+    font-size: 0;
+  }
+
+  .form-input:hover,
+  .form-input:focus {
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  input[type="search"]::-webkit-search-decoration,
+  input[type="search"]::-webkit-search-cancel-button,
+  input[type="search"]::-webkit-search-results-button,
+  input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.form-search-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 13px;
+
+  width: 28px;
+  height: 28px;
+  margin: auto;
+
+  border: none;
+  font-size: 0;
+  background: url('../images/icon-search.svg');
+  pointer-events: none;
+}
+
+
+
+.form-subscribe {
+  position: relative;
+  padding: 60px 0;
+  margin-bottom: 90px;
+
+  background-color: #ED413C;
+}
+
+.form-subscribe:before {
+  content: "";
+
+  position: absolute;
+  top: -42px;
+  left: 0;
+  right: 0;
+  bottom: 42px;
+
+  width: 100%;
+  height: 350px;
+  background: url('../images/bg-line-block.svg') no-repeat center /cover;
+  opacity: 0.3;
+}
+
+.form-subscribe-title {
+  margin-bottom: 20px;
+
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 130%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.form-partners {
+  padding-top: 50px;
+}
+
+
+@media (max-width: 768px) {
+  .form-input {
+    margin-bottom: 10px;
+  }
+
+  .form-text {
+    font-size: 16px;
+  }
+
+  .form-subscribe {
+    margin-bottom: 40px;
+
+    .btn {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .form-subscribe-title {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+
+  .form-partners {
+    padding-top: 0;
+  }
+}

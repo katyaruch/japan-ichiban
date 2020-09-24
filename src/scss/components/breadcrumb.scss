@@ -1,0 +1,9 @@
+.breadcrumb {
+  padding-left: 0;
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  content: url("../images/icon-arrow.svg");
+}

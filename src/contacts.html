@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('components/_head.html')
+
+<body>
+  @@include('components/_header.html')
+  <!-- WRITE CODE HERE -->
+
+  <section class="section">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+        </ul>
+      </nav>
+      <h1 class="title">Контакты</h1>
+      <div class="row">
+        <div class="col-md-7 contacts-inner">
+          <ul class="contacts-list">
+            <li class="contacts-item">
+              <p class="contacts-item-title">Пункт самовывоза в Москве:</p>
+              <a href="#" class="contacts-item-link">@@include('images/icon-address.svg')ул. Прянишникова, 19А, стр. 1</a>
+            </li>
+            <li class="contacts-item">
+              <p class="contacts-item-title">Позвоните</p>
+              <a href="#" class="contacts-item-link">@@include('images/icon-phone.svg')+7 (495) 783-13-30</a>
+              <a href="#" class="contacts-item-link">@@include('images/icon-phone.svg')+7(926) 507-35-82</a>
+            </li>
+            <li class="contacts-item">
+              <p class="contacts-item-title">Напишите</p>
+              <a href="#" class="contacts-item-link">@@include('images/icon-mail.svg')office@japanichiban.ru</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="contacts-map">
+      <div id="map" class="map"></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        @@include('components/form-partners.html')
+      </div>
+    </div>
+  </section>
+  <!-- STOP WRITE CODE -->
+  @@include('components/_footer.html')
+  @@include('components/_scripts.html')
+</body>
+
+</html>
