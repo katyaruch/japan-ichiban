@@ -8,7 +8,7 @@
 
 .account-nav-link {
   display: block;
-  margin-bottom: 30px;
+  padding: 16px 0;
 
   font-weight: bold;
   font-size: 14px;
@@ -30,6 +30,7 @@
 .account-order-title {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 
   padding: 16px 20px;
   margin-bottom: 5px;
@@ -39,10 +40,16 @@
 
 .account-order-cancel,
 .account-order-delete {
+  flex-shrink: 0;
+  margin-left: 15px;
+  padding: 0;
+  border: none;
   border-bottom: 1px dashed #000000;
+  background: transparent;
 }
 
 .account-order-item {
+  display: flex;
   padding: 15px 0;
   border-bottom: 1px solid #DAE1E7;
 
@@ -68,18 +75,17 @@
 }
 
 .account-order-item-name {
-  display: inline-block;
-  margin: 0 15px 15px 0;
+  margin-right: 15px;
   font-size: 16px;
 }
 
 .account-order-item-count {
-
+  white-space: nowrap;
 }
 
 .account-order-item-price {
   display: block;
-  margin-bottom: 15px;
+  margin: 15px 0;
   font-size: 18px;
 }
 
@@ -92,14 +98,14 @@
   margin-bottom: 15px;
 
   .value {
-    font-weight: 500;
+    font-weight: 600;
     color: #219653;
   }
 }
 
 .account-order-delivery {
   .value {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
@@ -115,4 +121,45 @@
 .account-order-item-feedback {
   font-weight: 600;
   font-size: 16px;
+}
+
+
+@media (max-width: 540px) {
+
+  .account-nav {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+
+    margin-bottom: 15px;
+
+    li {
+      flex-shrink: 0;
+    }
+  }
+
+  .account-nav-link {
+    margin-right: 20px;
+  }
+
+  .account-order-title {
+    // flex-wrap: wrap;
+  }
+
+  .account-order-cancel {
+  }
+
+  .account-order-item-price {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+
+  .account-order-item-name,
+  .account-order-item-feedback,
+  .account-order-total {
+    font-size: 14px;
+  }
+
+  .account-order-sum {
+    margin-top: 15px;
+  }
 }

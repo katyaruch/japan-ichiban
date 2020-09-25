@@ -29,12 +29,12 @@
             <div class="account-order">
               <div class="account-order-title">
                 Заказ №51685465 от 14.09.2020  13:38
-                <a href="#" class="account-order-cancel">Отменить заказ</a>
+                <button class="account-order-cancel" data-toggle="modal" data-target="#modal--order-close">Отменить заказ</button>
               </div>
               <div class="row">
                 <div class="col-md-7">
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <img src="/images/products/product-3.png" alt="Устрицы японские">
                     </a>
                     <div class="account-order-item-inner">
@@ -44,7 +44,7 @@
                     </div>
                   </div>
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <img src="/images/products/product-4.png" alt="Устрицы японские">
                     </a>
                     <div class="account-order-item-inner">
@@ -54,7 +54,7 @@
                     </div>
                   </div>
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       @@include('images/icon-delivery.svg')
                     </a>
                     <div class="account-order-item-inner">
@@ -81,12 +81,12 @@
             <div class="account-order">
               <div class="account-order-title">
                 Заказ №51685465 от 14.09.2020  13:38
-                <a href="#" class="account-order-delete">Удалить заказ</a>
+                <button class="account-order-delete" data-toggle="modal" data-target="#modal--order-delete">Удалить заказ</button>
               </div>
               <div class="row">
                 <div class="col-md-7">
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <img src="/images/products/product-2.png" alt="Устрицы японские">
                     </a>
                     <div class="account-order-item-inner">
@@ -97,7 +97,7 @@
                     </div>
                   </div>
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <img src="/images/products/product-1.png" alt="Устрицы японские">
                     </a>
                     <div class="account-order-item-inner">
@@ -108,7 +108,7 @@
                     </div>
                   </div>
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       @@include('images/icon-delivery.svg')
                     </a>
                     <div class="account-order-item-inner">
@@ -160,6 +160,38 @@
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal--order-close" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Вы хотите отменить заказ?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--white" data-dismiss="modal">Нет</button>
+          <button type="button" class="btn">Отменить заказ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal--order-delete" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Вы хотите удалить заказ?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--white" data-dismiss="modal">Нет</button>
+          <button type="button" class="btn">Удалить заказ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('components/modal--product.html')
 
   <!-- STOP WRITE CODE -->
   @@include('components/_footer.html')

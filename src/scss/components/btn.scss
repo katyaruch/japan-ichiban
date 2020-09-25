@@ -44,3 +44,15 @@
   display: block;
   margin: auto;
 }
+
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 14px 25px 13px;
+  }
+
+  .btn-cart {
+    padding-left: 65px;
+    background-position: 20px;
+  }
+}

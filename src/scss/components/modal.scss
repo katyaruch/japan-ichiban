@@ -8,7 +8,7 @@
 }
 
 .modal-header {
-  padding: 40px 40px 10px;
+  padding: 40px 40px 20px;
   border: none;
 }
 
@@ -17,13 +17,20 @@
 }
 
 button.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
   padding: 1rem;
+  margin: 0;
   background: url('../images/icon-close.svg') no-repeat center;
 }
 
 .modal-title {
+  margin: 0 auto;
   font-weight: bold;
   font-size: 18px;
+  text-align: center;
 }
 
 .modal-body {
@@ -31,9 +38,10 @@ button.close {
 }
 
 .modal-footer {
+  flex-wrap: nowrap;
+  justify-content: center;
   padding: 10px 40px 40px;
   border: none;
-  justify-content: center;
 }
 
 
@@ -59,6 +67,14 @@ button.close {
 
 
 @media (max-width: 576px) {
+  .modal-header {
+    padding: 40px 20px 20px;
+  }
+
+  .modal-footer {
+    padding: 10px 20px 40px;
+  }
+
   .modal-body {
     padding: 0 20px;
   }

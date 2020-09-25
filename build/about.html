@@ -155,8 +155,8 @@ Instagram</a>
                   <input type="search" class="form-input" id="search-input" placeholder="Поиск">
                   <button type="submit" class="form-search-btn">Найти</button>
                 </form>
-                <a href="/account.html" class="user-link user-profile" title="Профиль">Профиль</a>
-                <a href="/cart.html" class="user-link user-cart" title="Корзина" data-toggle="modal" data-target="#modal-cart">
+                <a href="/account.html" data-toggle="modal" data-target="#modal--login" class="user-link user-profile" title="Профиль">Профиль</a>
+                <a href="/cart.html" class="user-link user-cart" title="Корзина" data-toggle="modal" data-target="#modal--cart">
                   Корзина
                   <span class="user-cart-count">2</span>
                 </a>
@@ -171,44 +171,92 @@ Instagram</a>
     </div>
   </header>
 
-  <div class="modal modal-cart fade" id="modal-cart" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Ваш заказ</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-        </div>
+<!-- Modal Login -->
+<div class="modal fade" id="modal--login" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Войти</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form>
         <div class="modal-body">
-          <table class="modal-table">
-            <tr>
-              <td class="product-name">Устрицы японские</td>
-              <td class="product-price">6 600 ₽</td>
-              <td>
-                <input class="cart-spinner" name="quantity" value="2" readonly>
-              </td>
-            </tr>      
-            <tr>
-              <td class="product-name">Устрицы японские</td>
-              <td class="product-price">3 300 ₽</td>
-              <td>
-                <input class="cart-spinner" name="quantity" value="1" readonly>
-              </td>
-            </tr>   
-            <tr>
-              <td class="product-name">Устрицы японские</td>
-              <td class="product-price">3 300 ₽</td>
-              <td>
-                <input class="cart-spinner" name="quantity" value="1" readonly>
-              </td>
-            </tr>       
-          </table>
+          <input class="form-input" type="email" placeholder="E-mail">
+          <!-- <input class="form-input" type="tel" placeholder="8 (___) ___ - ____"> -->
+          <input class="form-input" type="password" placeholder="Пароль">
         </div>
         <div class="modal-footer">
-          <a href="/cart.html" class="btn btn--white">Заказать</a>
+          <!-- <button type="button" class="btn">Войти</button> -->
+          <a href="/account.html" class="btn">Войти</a>
+          <button type="button" class="btn btn--white" data-toggle="modal" data-target="#modal--reg">Зарегистрироваться</button>
         </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Modal Register -->
+<div class="modal fade" id="modal--reg" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Зарегистрироваться</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <input class="form-input" type="text" placeholder="Фамилия">
+          <input class="form-input" type="text" placeholder="Имя">
+          <input class="form-input" type="email" placeholder="E-mail">
+          <input class="form-input" type="tel" placeholder="8 (___) ___ - ____">
+          <input class="form-input" type="password" placeholder="Пароль">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn">Зарегистрироваться</button>
+          <button class="btn btn--white" data-toggle="modal" data-target="#modal--login">Войти</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Modal Cart -->
+<div class="modal modal--cart fade" id="modal--cart" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ваш заказ</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="modal-table">
+          <tr>
+            <td class="product-name">Устрицы японские</td>
+            <td class="product-price">6 600 ₽</td>
+            <td>
+              <input class="cart-spinner" name="quantity" value="2" readonly>
+            </td>
+          </tr>      
+          <tr>
+            <td class="product-name">Устрицы японские</td>
+            <td class="product-price">3 300 ₽</td>
+            <td>
+              <input class="cart-spinner" name="quantity" value="1" readonly>
+            </td>
+          </tr>   
+          <tr>
+            <td class="product-name">Устрицы японские</td>
+            <td class="product-price">3 300 ₽</td>
+            <td>
+              <input class="cart-spinner" name="quantity" value="1" readonly>
+            </td>
+          </tr>       
+        </table>
+      </div>
+      <div class="modal-footer">
+        <a href="/cart.html" class="btn">Оформить</a>
       </div>
     </div>
   </div>
+</div>
   <!-- WRITE CODE HERE -->
 
   <section class="about-top section">
@@ -465,7 +513,6 @@ Instagram</a>
   <script async src="js/webp.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVOF8VBhcgfgEyX58Fp0ariZRVlGX-7Jk&callback=initMap"></script>
 
 <script src="js/main.min.js"></script>
 </body>

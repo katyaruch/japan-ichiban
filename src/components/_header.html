@@ -103,8 +103,8 @@
                   <input type="search" class="form-input" id="search-input" placeholder="Поиск">
                   <button type="submit" class="form-search-btn">Найти</button>
                 </form>
-                <a href="/account.html" class="user-link user-profile" title="Профиль">Профиль</a>
-                <a href="/cart.html" class="user-link user-cart" title="Корзина" data-toggle="modal" data-target="#modal-cart">
+                <a href="/account.html" data-toggle="modal" data-target="#modal--login" class="user-link user-profile" title="Профиль">Профиль</a>
+                <a href="/cart.html" class="user-link user-cart" title="Корзина" data-toggle="modal" data-target="#modal--cart">
                   Корзина
                   <span class="user-cart-count">2</span>
                 </a>
@@ -119,41 +119,6 @@
     </div>
   </header>
 
-  <div class="modal modal-cart fade" id="modal-cart" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Ваш заказ</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <table class="modal-table">
-            <tr>
-              <td class="product-name">Устрицы японские</td>
-              <td class="product-price">6 600 ₽</td>
-              <td>
-                <input class="cart-spinner" name="quantity" value="2" readonly>
-              </td>
-            </tr>      
-            <tr>
-              <td class="product-name">Устрицы японские</td>
-              <td class="product-price">3 300 ₽</td>
-              <td>
-                <input class="cart-spinner" name="quantity" value="1" readonly>
-              </td>
-            </tr>   
-            <tr>
-              <td class="product-name">Устрицы японские</td>
-              <td class="product-price">3 300 ₽</td>
-              <td>
-                <input class="cart-spinner" name="quantity" value="1" readonly>
-              </td>
-            </tr>       
-          </table>
-        </div>
-        <div class="modal-footer">
-          <a href="/cart.html" class="btn btn--white">Заказать</a>
-        </div>
-      </div>
-    </div>
-  </div>
+@@include('modal--login.html')
+@@include('modal--reg.html')
+@@include('modal--cart.html')

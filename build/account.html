@@ -155,8 +155,8 @@ Instagram</a>
                   <input type="search" class="form-input" id="search-input" placeholder="Поиск">
                   <button type="submit" class="form-search-btn">Найти</button>
                 </form>
-                <a href="/account.html" class="user-link user-profile" title="Профиль">Профиль</a>
-                <a href="/cart.html" class="user-link user-cart" title="Корзина" data-toggle="modal" data-target="#modal-cart">
+                <a href="/account.html" data-toggle="modal" data-target="#modal--login" class="user-link user-profile" title="Профиль">Профиль</a>
+                <a href="/cart.html" class="user-link user-cart" title="Корзина" data-toggle="modal" data-target="#modal--cart">
                   Корзина
                   <span class="user-cart-count">2</span>
                 </a>
@@ -171,44 +171,92 @@ Instagram</a>
     </div>
   </header>
 
-  <div class="modal modal-cart fade" id="modal-cart" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Ваш заказ</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
-        </div>
+<!-- Modal Login -->
+<div class="modal fade" id="modal--login" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Войти</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form>
         <div class="modal-body">
-          <table class="modal-table">
-            <tr>
-              <td class="product-name">Устрицы японские</td>
-              <td class="product-price">6 600 ₽</td>
-              <td>
-                <input class="cart-spinner" name="quantity" value="2" readonly>
-              </td>
-            </tr>      
-            <tr>
-              <td class="product-name">Устрицы японские</td>
-              <td class="product-price">3 300 ₽</td>
-              <td>
-                <input class="cart-spinner" name="quantity" value="1" readonly>
-              </td>
-            </tr>   
-            <tr>
-              <td class="product-name">Устрицы японские</td>
-              <td class="product-price">3 300 ₽</td>
-              <td>
-                <input class="cart-spinner" name="quantity" value="1" readonly>
-              </td>
-            </tr>       
-          </table>
+          <input class="form-input" type="email" placeholder="E-mail">
+          <!-- <input class="form-input" type="tel" placeholder="8 (___) ___ - ____"> -->
+          <input class="form-input" type="password" placeholder="Пароль">
         </div>
         <div class="modal-footer">
-          <a href="/cart.html" class="btn btn--white">Заказать</a>
+          <!-- <button type="button" class="btn">Войти</button> -->
+          <a href="/account.html" class="btn">Войти</a>
+          <button type="button" class="btn btn--white" data-toggle="modal" data-target="#modal--reg">Зарегистрироваться</button>
         </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Modal Register -->
+<div class="modal fade" id="modal--reg" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Зарегистрироваться</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <input class="form-input" type="text" placeholder="Фамилия">
+          <input class="form-input" type="text" placeholder="Имя">
+          <input class="form-input" type="email" placeholder="E-mail">
+          <input class="form-input" type="tel" placeholder="8 (___) ___ - ____">
+          <input class="form-input" type="password" placeholder="Пароль">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn">Зарегистрироваться</button>
+          <button class="btn btn--white" data-toggle="modal" data-target="#modal--login">Войти</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- Modal Cart -->
+<div class="modal modal--cart fade" id="modal--cart" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Ваш заказ</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="modal-table">
+          <tr>
+            <td class="product-name">Устрицы японские</td>
+            <td class="product-price">6 600 ₽</td>
+            <td>
+              <input class="cart-spinner" name="quantity" value="2" readonly>
+            </td>
+          </tr>      
+          <tr>
+            <td class="product-name">Устрицы японские</td>
+            <td class="product-price">3 300 ₽</td>
+            <td>
+              <input class="cart-spinner" name="quantity" value="1" readonly>
+            </td>
+          </tr>   
+          <tr>
+            <td class="product-name">Устрицы японские</td>
+            <td class="product-price">3 300 ₽</td>
+            <td>
+              <input class="cart-spinner" name="quantity" value="1" readonly>
+            </td>
+          </tr>       
+        </table>
+      </div>
+      <div class="modal-footer">
+        <a href="/cart.html" class="btn">Оформить</a>
       </div>
     </div>
   </div>
+</div>
   <!-- WRITE CODE HERE -->
   <section class="section">
     <div class="container">
@@ -234,12 +282,12 @@ Instagram</a>
             <div class="account-order">
               <div class="account-order-title">
                 Заказ №51685465 от 14.09.2020  13:38
-                <a href="#" class="account-order-cancel">Отменить заказ</a>
+                <button class="account-order-cancel" data-toggle="modal" data-target="#modal--order-close">Отменить заказ</button>
               </div>
               <div class="row">
                 <div class="col-md-7">
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <img src="/images/products/product-3.png" alt="Устрицы японские">
                     </a>
                     <div class="account-order-item-inner">
@@ -249,7 +297,7 @@ Instagram</a>
                     </div>
                   </div>
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <img src="/images/products/product-4.png" alt="Устрицы японские">
                     </a>
                     <div class="account-order-item-inner">
@@ -259,7 +307,7 @@ Instagram</a>
                     </div>
                   </div>
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <svg width="58" height="46" viewBox="0 0 58 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M56.55 31.625H55.1V21.9129C55.1 20.7719 54.6378 19.6758 53.8222 18.8672L44.7688 9.8918C43.9531 9.0832 42.8475 8.625 41.6966 8.625H37.7V4.3125C37.7 1.93164 35.7516 0 33.35 0H4.35C1.94844 0 0 1.93164 0 4.3125V33.0625C0 35.4434 1.94844 37.375 4.35 37.375H5.8C5.8 42.1367 9.69688 46 14.5 46C19.3031 46 23.2 42.1367 23.2 37.375H34.8C34.8 42.1367 38.6969 46 43.5 46C48.3031 46 52.2 42.1367 52.2 37.375H56.55C57.3475 37.375 58 36.7281 58 35.9375V33.0625C58 32.2719 57.3475 31.625 56.55 31.625ZM14.5 41.6875C12.0984 41.6875 10.15 39.7559 10.15 37.375C10.15 34.9941 12.0984 33.0625 14.5 33.0625C16.9016 33.0625 18.85 34.9941 18.85 37.375C18.85 39.7559 16.9016 41.6875 14.5 41.6875ZM43.5 41.6875C41.0984 41.6875 39.15 39.7559 39.15 37.375C39.15 34.9941 41.0984 33.0625 43.5 33.0625C45.9016 33.0625 47.85 34.9941 47.85 37.375C47.85 39.7559 45.9016 41.6875 43.5 41.6875ZM50.75 23H37.7V12.9375H41.6966L50.75 21.9129V23Z" fill="#C4C4C4"/>
 </svg>
@@ -289,12 +337,12 @@ Instagram</a>
             <div class="account-order">
               <div class="account-order-title">
                 Заказ №51685465 от 14.09.2020  13:38
-                <a href="#" class="account-order-delete">Удалить заказ</a>
+                <button class="account-order-delete" data-toggle="modal" data-target="#modal--order-delete">Удалить заказ</button>
               </div>
               <div class="row">
                 <div class="col-md-7">
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <img src="/images/products/product-2.png" alt="Устрицы японские">
                     </a>
                     <div class="account-order-item-inner">
@@ -305,7 +353,7 @@ Instagram</a>
                     </div>
                   </div>
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <img src="/images/products/product-1.png" alt="Устрицы японские">
                     </a>
                     <div class="account-order-item-inner">
@@ -316,7 +364,7 @@ Instagram</a>
                     </div>
                   </div>
                   <div class="account-order-item">
-                    <a href="#" class="account-order-item-img">
+                    <a href="#product" data-toggle="modal" data-target="#modal--product" class="account-order-item-img">
                       <svg width="58" height="46" viewBox="0 0 58 46" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M56.55 31.625H55.1V21.9129C55.1 20.7719 54.6378 19.6758 53.8222 18.8672L44.7688 9.8918C43.9531 9.0832 42.8475 8.625 41.6966 8.625H37.7V4.3125C37.7 1.93164 35.7516 0 33.35 0H4.35C1.94844 0 0 1.93164 0 4.3125V33.0625C0 35.4434 1.94844 37.375 4.35 37.375H5.8C5.8 42.1367 9.69688 46 14.5 46C19.3031 46 23.2 42.1367 23.2 37.375H34.8C34.8 42.1367 38.6969 46 43.5 46C48.3031 46 52.2 42.1367 52.2 37.375H56.55C57.3475 37.375 58 36.7281 58 35.9375V33.0625C58 32.2719 57.3475 31.625 56.55 31.625ZM14.5 41.6875C12.0984 41.6875 10.15 39.7559 10.15 37.375C10.15 34.9941 12.0984 33.0625 14.5 33.0625C16.9016 33.0625 18.85 34.9941 18.85 37.375C18.85 39.7559 16.9016 41.6875 14.5 41.6875ZM43.5 41.6875C41.0984 41.6875 39.15 39.7559 39.15 37.375C39.15 34.9941 41.0984 33.0625 43.5 33.0625C45.9016 33.0625 47.85 34.9941 47.85 37.375C47.85 39.7559 45.9016 41.6875 43.5 41.6875ZM50.75 23H37.7V12.9375H41.6966L50.75 21.9129V23Z" fill="#C4C4C4"/>
 </svg>
@@ -371,6 +419,86 @@ Instagram</a>
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modal--order-close" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Вы хотите отменить заказ?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--white" data-dismiss="modal">Нет</button>
+          <button type="button" class="btn">Отменить заказ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modal--order-delete" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Вы хотите удалить заказ?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--white" data-dismiss="modal">Нет</button>
+          <button type="button" class="btn">Удалить заказ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Product -->
+<div class="modal modal--product fade" id="modal--product" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title"></h5> -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="product-card row">
+          <div class="product-card-left col-md-5">
+            <div class="product-slider">
+              <img src="images/products/устрицы/__1.jpg" alt="Устрицы японские">
+              <img src="images/products/устрицы/__2.jpg" alt="Устрицы японские">
+              <img src="images/products/устрицы/__4.jpg" alt="Устрицы японские">
+              <img src="images/products/устрицы/__5.jpg" alt="Устрицы японские">
+              <img src="images/products/устрицы/__6.jpg" alt="Устрицы японские">
+            </div>
+            <div class="product-slider-thumb">
+              <img src="images/products/устрицы/__1.jpg" alt="Устрицы японские">
+              <img src="images/products/устрицы/__2.jpg" alt="Устрицы японские">
+              <img src="images/products/устрицы/__4.jpg" alt="Устрицы японские">
+              <img src="images/products/устрицы/__5.jpg" alt="Устрицы японские">
+              <img src="images/products/устрицы/__6.jpg" alt="Устрицы японские">
+            </div>
+          </div>
+          <div class="product-card-right col-md-7">
+            <p class="product-card-category">Морепродукты</p>
+            <h5 class="product-card-name">Устрицы японские</h5>
+            <div class="d-flex">
+              <div class="product-rating">
+                <div class="value" style="width: 80%;"></div>
+              </div>
+              <span class="product-votes">4 отзыва</span>
+            </div>
+            <p class="product-card-price">3 300 ₽</p>
+            <a href="#" class="btn btn-cart">Добавить в корзину</a>
+          </div>
+          <div class="col-12">
+            <p class="product-card-title">Описание</p>
+            <p class="product-card-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies lorem eu cras fringilla at ac, diam sagittis. Ipsum arcu urna lacus, rutrum ut quis fusce scelerisque. Tellus adipiscing et sit turpis fermentum. Viverra nibh nibh sit pulvinar. Egestas cras non eu nunc et dui urna, at. Cras id nam nam a sit. Laoreet euismod libero elit consequat arcu non. Eget sed mi odio vulputate pulvinar quis facilisi felis aliquet. Vitae posuere viverra amet, massa in lacus ultrices elit penatibus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- STOP WRITE CODE -->
   </div>
@@ -472,7 +600,6 @@ Instagram</a>
   <script async src="js/webp.min.js"></script>
 <script src="js/libs.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVOF8VBhcgfgEyX58Fp0ariZRVlGX-7Jk&callback=initMap"></script>
 
 <script src="js/main.min.js"></script>
 </body>
